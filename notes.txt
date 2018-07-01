@@ -1,0 +1,12 @@
+# nodemcu
+ESP8266 NodeMCU LUA CP2102 WiFi Wireless Development Board
+Tools -> Board -> NodeMCU 1.0 (ESP-12E Module)
+Tools -> Flash Size -> 4M (3M SPIFFS)
+Tools -> CPU Frequency -> 80 Mhz
+Tools -> Upload Speed -> 921600
+
+http://tech.sparkfabrik.com/2017/03/01/espruino-nodemcu-step-by-step/
+https://www.espruino.com/ESP8266_Flashing
+https://github.com/tve/EspruinoDocs/blob/master/tutorials/ESP8266_WifiUsage.md
+
+xcode-select --install
