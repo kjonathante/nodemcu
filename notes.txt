@@ -1,3 +1,30 @@
+#brew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-macos
+
+
+pip3 install esptool
+
+download espruino
+using espruino_1v99_esp8266_4mb folder
+
+esptool.py --port /dev/cu.SLAB_USBtoUART --baud 115200 erase_flash
+
+
+esptool.py --port /dev/cu.SLAB_USBtoUART --baud 460800 write_flash \
+  --flash_freq 80m --flash_mode qio --flash_size 4MB-c1 \
+  0x0000 "boot_v1.6.bin" 0x1000 espruino_esp8266_user1.bin \
+  0x3FC000  esp_init_data_default.bin 0x3FE000 blank.bin
+  
+var wifi = require("Wifi");
+wifi.connect("my-ssid", {password:"my-pwd"}, function(err){
+  console.log("connected? err=", err, "info=", wifi.getIP());
+});
+wifi.stopAP();  
+
+wifi.setHostname("kitNodeMCU");
+wifi.save();
+
 # nodemcu
 ESP8266 NodeMCU LUA CP2102 WiFi Wireless Development Board
 Tools -> Board -> NodeMCU 1.0 (ESP-12E Module)
